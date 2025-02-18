@@ -1,3 +1,12 @@
+/**
+ * 
+ * Todo 1: render de person in contact
+ * todo 2: render de navigatie items in ELKE template
+ *   STAP 1: importeer
+ *   STAP 2: voeg toe aan de renderobject
+ *   STAP 3: voeg een navigatiebalk toe aan alle templates
+ */
+
 export const person = {
   firstname: "Frederick",
   lastname: "Roegiers",
@@ -6,6 +15,8 @@ export const person = {
     country: "Belgium",
   },
 };
+
+/** ---------------------------------------------------------- */
 
 export const dinosaurs = [
   {

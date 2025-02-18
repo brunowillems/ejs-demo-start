@@ -10,14 +10,16 @@ export const about = (req, res) => {
     res.render('pages/default', {
         title: 'About us',
         content: 'We are a group of dinosaur enthusiasts.',
-        team: ["T-Rex", "Velociraptor", "Stegosaurus", "Triceratops", "<strong>Spinosaurus</strong>"]
+        team: ["T-Rex", "Velociraptor", "Stegosaurus", "Triceratops", "<strong>Spinosaurus</strong>"],
     });
 }
 
+import { person } from '../data/data.js';
 export const contact = (req, res) => {
     res.render('pages/contact', {
         title: 'Contact',
-        content: 'Contact us at 09 233 40 89'
+        content: 'Contact us at 09 233 40 89',
+        person,
     });
 }
 
