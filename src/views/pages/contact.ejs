@@ -11,7 +11,19 @@
 </head>
 
 <body>
+
+    <nav class="primary">
+        <% navItems.forEach(element=> { %>
+            <li>
+                <a href="<%= element.url %>">
+                    <%= element.label %>
+                </a>
+            </li>
+            <% }); %>
+    </nav>
+
     <marquee>Contact Page</marquee>
+
     <h1>
         <%= title %>
     </h1>
@@ -24,6 +36,8 @@
     <address>
         <%= person.location.city + ", " + person.location.country %>
     </address>
+
+    <pre><%= JSON.stringify(locals, null, 2) %></pre>
 </body>
 
 </html>
