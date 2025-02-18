@@ -12,35 +12,27 @@
 
 <body>
 
-    <nav class="primary">
-        <% navItems.forEach(element=> { %>
-            <li>
-                <a href="<%= element.url %>">
-                    <%= element.label %>
-                </a>
-            </li>
-            <% }); %>
-    </nav>
+    <%- include('../partials/nav') %>
 
-    <h1>
-        <%= title %>
-    </h1>
-    <hr>
-    <%= content %>
-        </hr>
-        <!-- Deze is wel zichtbaar -->
-        <% /* Niemand weet dat ik Repelsteeltje heet. */ %>
-            <hr>
-            <% if (team) { %>
-                <h3>Maak kennis met ons team: </h3>
-                <ul>
-                    <% team.forEach(dino=> { %>
-                        <li>
-                            <%- dino %>
-                        </li>
-                        <% }); %>
-                </ul>
-                <% } %>
+        <h1>
+            <%= title %>
+        </h1>
+        <hr>
+        <%= content %>
+            </hr>
+            <!-- Deze is wel zichtbaar -->
+            <% /* Niemand weet dat ik Repelsteeltje heet. */ %>
+                <hr>
+                <% if (team) { %>
+                    <h3>Maak kennis met ons team: </h3>
+                    <ul>
+                        <% team.forEach(dino=> { %>
+                            <li>
+                                <%- dino %>
+                            </li>
+                            <% }); %>
+                    </ul>
+                    <% } %>
 </body>
 
 </html>

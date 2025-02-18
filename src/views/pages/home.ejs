@@ -12,22 +12,16 @@
 
 <body>
 
-    <nav class="primary">
-        <% navItems.forEach(element=> { %>
-            <li>
-                <a href="<%= element.url %>">
-                    <%= element.label %>
-                </a>
-            </li>
-            <% }); %>
-    </nav>
+    <%- include('../partials/nav') %>
 
-    <h1>
-        <%= title %>
-    </h1>
-    <p>
-        <%= content %>
-    </p>
+        <h1>
+            <%= title %>
+        </h1>
+        <p>
+            <%= content %>
+        </p>
+
+        <%- include('../partials/footer') %>
 </body>
 
 </html>
