@@ -21,6 +21,13 @@ app.get("/", (req, res) => {
   });
 });
 
+app.get("/about", (req, res) => {
+  res.render("home", {
+    title: "About",
+    content: "This is a page about dinosaurs"
+  });
+});
+
 // start the server, listen on port defined in .env file
 app.listen(process.env.PORT, () => {
   // callback function that is called when the server starts
