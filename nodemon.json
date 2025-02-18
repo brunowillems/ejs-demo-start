@@ -1,4 +1,6 @@
 {
-  "watch": ["./src"],
-  "ext": "js, css, html, json"
+  "watch": [
+    "./src"
+  ],
+  "ext": "js, css, html, json, ejs"
 }
