@@ -3,7 +3,6 @@ export const index = (req, res) => {
         title: `${dinosaurs.name}`,
         herbivore: `${dinosaurs.isHerbivore}`,
         image: `${dinosaurs.image}`,
-        description: `${dinosaurs.description}`,
     });
 }
 
