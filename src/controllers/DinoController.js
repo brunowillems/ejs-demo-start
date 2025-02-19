@@ -1,4 +1,3 @@
-import expressEjsLayouts from "express-ejs-layouts";
 import { dinosaurs, navItems } from "../data/data.js";
 
 export const index = (req, res) => {
@@ -6,7 +5,6 @@ export const index = (req, res) => {
         dinosaurs,
         title: dinosaurs.name,
         herbivore: dinosaurs.isHerbivore,
-        // image: dinosaurs.image,
         navItems,
     });
 }

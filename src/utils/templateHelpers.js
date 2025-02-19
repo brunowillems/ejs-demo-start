@@ -5,8 +5,8 @@ const helpers = {
     },
 
     Highlight: function (input) {
-        return `<span style="background-color: yelow;>${input}</span>`
-    }
+        return `🦖 <span style="background-color: yellow;>${input}</span>`
+    },
 }
 
 export default helpers;
