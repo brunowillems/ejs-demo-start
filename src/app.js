@@ -35,10 +35,6 @@ app.get("/privacy", privacy);
 app.get("/dinosaurs", index);
 app.get("/dinosaur/:slug", detail);
 
-app.get('/dinosaur/:id', (req, res) => {
-  res.render(`Dinosaur with ID ${req.params.id}`);
-});
-
 app.get('*', (req, res) => {
   res.status(404).render('errors/404', {
     layout: 'layouts/error',
