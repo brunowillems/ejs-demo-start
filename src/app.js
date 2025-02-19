@@ -12,6 +12,10 @@ import {
   detail
 } from "./controllers/DinoController.js";
 
+import
+helpers
+  from "./utils/templateHelpers.js";
+
 // create an instance of express
 const app = express();
 
@@ -22,6 +26,9 @@ app.use(expressLayouts);
 app.set("view engine", "ejs");
 app.set("layout", "layouts/main");
 app.set("views", path.resolve("src", "views"));
+
+// Make the helpers available to all views
+Object.assign(app.locals, helpers);
 
 // serve static files from the public folder
 // they can be accessed from the root of the site (e.g. /assets/images/dino_07.png) 🦕

@@ -1,17 +1,18 @@
-<% if (dinosaurs) { %>
-    <marquee>Check out our cool dinosaurs</marquee>
+<marquee>Check out our cool dinosaurs</marquee>
 
-    <div>
-        <% dinosaurs.forEach(dinosaur=> { %>
-            <div>
-                <h1>
-                    <%= dinosaur.name %>
-                </h1>
-                <img src="/assets/images/<%= dinosaur.image %>" alt="<%= dinosaur.name %>" />
-                <p>
-                    <%= dinosaur.description %>
-                </p>
-            </div>
-            <% }); %>
-    </div>
-    <% } %>
+<h1>
+    <%= title %>
+</h1>
+<ul class="dinos">
+    <% dinosaurs.forEach(dinosaur=> { %>
+        <li class="<%= dinosaur.isHerbivore ? " green" : "red" %>" >
+            <p>
+                <% if (dinosaur.isHerbivore) { %> Herbivore <% } else { %> Carnivore <% } %>
+            </p>
+            <a href="/dinosaurs/<%= dinosaur.slug %>">
+                <%= dinosaur.name %>
+            </a>
+            <img src="/assets/images/<%= dinosaur.image %>" alt="<%= dinosaur.name %>" />
+        </li>
+        <% }); %>
+</ul>
