@@ -9,7 +9,7 @@ import {
 
 import {
   index,
-  details
+  detail
 } from "./controllers/DinoController.js";
 
 // create an instance of express
@@ -33,7 +33,7 @@ app.get("/about", about);
 app.get("/contact", contact);
 app.get("/privacy", privacy);
 app.get("/dinosaurs", index);
-app.get("/dinosaur/:id", details);
+app.get("/dinosaur/:slug", detail);
 
 app.get('/dinosaur/:id', (req, res) => {
   res.render(`Dinosaur with ID ${req.params.id}`);

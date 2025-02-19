@@ -6,7 +6,7 @@ export const index = (req, res) => {
     });
 }
 
-export const details = (req, res) => {
+export const detail = (req, res) => {
     res.render('pages/dinosaur', {
         title: `${dinosaurs.name}`,
         herbivore: `${dinosaurs.isHerbivore}`,
