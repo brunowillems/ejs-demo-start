@@ -3,15 +3,8 @@ import express from "express";
 import path from "path";
 import expressLayouts from "express-ejs-layouts";
 
-import {
-  home, about, contact, privacy
-} from "./controllers/PageController.js";
-
-import {
-  index,
-  detail
-} from "./controllers/DinoController.js";
-
+import * as pages from "./controllers/PageController.js";
+import * as dinos from "./controllers/DinoController.js";
 import
 helpers
   from "./utils/templateHelpers.js";
@@ -35,12 +28,12 @@ Object.assign(app.locals, helpers);
 app.use(express.static("public"));
 
 // Page routes
-app.get("/", home);
-app.get("/about", about);
-app.get("/contact", contact);
-app.get("/privacy", privacy);
-app.get("/dinosaurs", index);
-app.get("/dinosaur/:slug", detail);
+app.get("/", pages.home);
+app.get("/about", pages.about);
+app.get("/contact", pages.contact);
+app.get("/privacy", pages.privacy);
+app.get("/dinosaurs", dinos.index);
+app.get("/dinosaurs/:slug", dinos.detail);
 
 app.get('*', (req, res) => {
   res.status(404).render('errors/404', {

@@ -1,8 +1,8 @@
 <nav class="primary">
-    <% navItems.forEach(element=> { %>
+    <% navItems.forEach(item=> { %>
         <li>
-            <a href="<%= element.url %>">
-                <%= element.label %>
+            <a href="<%= item.url %>">
+                <%= item.label %>
             </a>
         </li>
         <% }); %>
