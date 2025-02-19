@@ -3,7 +3,14 @@ import express from "express";
 import path from "path";
 import expressLayouts from "express-ejs-layouts";
 
-import { home, about, contact, privacy, dinosaursList, dinosaur } from "./controllers/PageController.js";
+import {
+  home, about, contact, privacy
+} from "./controllers/PageController.js";
+
+import {
+  index,
+  details
+} from "./controllers/DinoController.js";
 
 // create an instance of express
 const app = express();
@@ -25,7 +32,8 @@ app.get("/", home);
 app.get("/about", about);
 app.get("/contact", contact);
 app.get("/privacy", privacy);
-app.get("/dinosaurs", dinosaursList)
+app.get("/dinosaurs", index);
+app.get("/dinosaur/:id", details);
 
 app.get('/dinosaur/:id', (req, res) => {
   res.render(`Dinosaur with ID ${req.params.id}`);
