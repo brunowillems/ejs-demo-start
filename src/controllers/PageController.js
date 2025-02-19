@@ -40,3 +40,11 @@ export const privacy = (req, res) => {
         navItems,
     });
 }
+
+export const dinosaursList = (req, res) => {
+    res.render('pages/dinosaurs', {
+        title: `${dinosaurs.name}`,
+        image: `${dinosaurs.image}`,
+        description: `${dinosaurs.description}`,
+    });
+}
