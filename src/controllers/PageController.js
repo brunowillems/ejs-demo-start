@@ -44,6 +44,16 @@ export const privacy = (req, res) => {
 export const dinosaursList = (req, res) => {
     res.render('pages/dinosaurs', {
         title: `${dinosaurs.name}`,
+        herbivore: `${dinosaurs.isHerbivore}`,
+        image: `${dinosaurs.image}`,
+        description: `${dinosaurs.description}`,
+    });
+}
+
+export const dinosaur = (req, res) => {
+    res.render('pages/dinosaur', {
+        title: `${dinosaurs.name}`,
+        herbivore: `${dinosaurs.isHerbivore}`,
         image: `${dinosaurs.image}`,
         description: `${dinosaurs.description}`,
     });
