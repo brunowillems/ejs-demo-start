@@ -1,15 +1,18 @@
-import { dinosaurs } from "../data/data.js";
+import { dinosaurs, navItems } from "../data/data.js";
 
 export const index = (req, res) => {
-    res.render('pages/dinosaurs', {
+    res.render('dinosaurs/index', {
+        dinosaurs,
         title: dinosaurs.name,
         herbivore: dinosaurs.isHerbivore,
-        image: dinosaurs.image,
+        // image: dinosaurs.image,
+        navItems,
     });
 }
 
 export const detail = (req, res) => {
-    res.render('pages/dinosaur', {
+    res.render('pages/dinosaur/:slug', {
+        dinosaurs,
         title: dinosaurs.name,
         herbivore: dinosaurs.isHerbivore,
         image: dinosaurs.image,

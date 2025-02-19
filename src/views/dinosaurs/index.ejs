@@ -1,13 +1,17 @@
-<marquee>Check out our cool dinosaurs</marquee>
+<% if (dinosaurs) { %>
+    <marquee>Check out our cool dinosaurs</marquee>
 
-<picture>
-    <%= image %>
-</picture>
-
-<h1>
-    <%= title %>
-</h1>
-
-<h2>
-    <%= herbivore %>
-</h2>
+    <div>
+        <% dinosaurs.forEach(dinosaur=> { %>
+            <div>
+                <h1>
+                    <%= dinosaur.name %>
+                </h1>
+                <img src="/assets/images/<%= dinosaur.image %>" alt="<%= dinosaur.name %>" />
+                <p>
+                    <%= dinosaur.description %>
+                </p>
+            </div>
+            <% }); %>
+    </div>
+    <% } %>
