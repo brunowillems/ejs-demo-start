@@ -25,6 +25,12 @@ app.get("/", home);
 app.get("/about", about);
 app.get("/contact", contact);
 app.get("/privacy", privacy);
+app.get("/dinosaurs")
+
+app.get('/dinosaur/:id', (req, res) => {
+  // res.send("dinosaur");
+  res.send(req.params.id);
+});
 
 app.get('*', (req, res) => {
   res.status(404).render('errors/404', {

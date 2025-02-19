@@ -3,6 +3,7 @@
 import {
     person,
     navItems, // url, label 
+    dinosaurs
 } from '../data/data.js';
 
 export const home = (req, res) => {
